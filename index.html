@@ -3,42 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Home | Thessaloniki Guide</title>
+    <link rel="stylesheet" href="index.css">
 </head>
-<body id="homeBody">
-    <header id="homeHeader">
-        <h1>Welcome to Thessaloniki!</h1>
-        <p>A Guide for tourists</p>
+<body>
+
+    <!-- ===================== HEADER ===================== -->
+    <header>
+        <img src="images/logo.jpg" alt="Thessaloniki Guide logo" class="logo">
+        <div class="header-text">
+            <h1>Welcome to Thessaloniki!</h1>
+            <p>A guide for tourists</p>
+        </div>
     </header>
 
+    <!-- ===================== MENU ===================== -->
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active"><span class="icon">&#127968;</span> Home</a></li>
+            <li><a href="attraction.html"><span class="icon">&#127963;</span> Attractions</a></li>
+            <li><a href="museums.html"><span class="icon">&#128444;</span> Museums</a></li>
+            <li><a href="beaches.html"><span class="icon">&#127958;</span> Beaches</a></li>
+            <li><a href="food.html"><span class="icon">&#127869;</span> Food</a></li>
+            <li><a href="entertainment.html"><span class="icon">&#127917;</span> Entertainment</a></li>
+            <li><a href="travelGuide.html"><span class="icon">&#129517;</span> Travel Guide</a></li>
+            <li><a href="photoGallery.html"><span class="icon">&#128247;</span> Gallery</a></li>
+            <li><a href="aboutUs.html"><span class="icon">&#128101;</span> About Us</a></li>
+            <li><a href="contactUs.html"><span class="icon">&#9993;</span> Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===================== MAIN ===================== -->
     <main id="homeMain">
-        <section id="culture">
+
+        <!-- ---------- LEFT COLUMN: photo on top, then Culture ---------- -->
+        <div id="leftColumn" class="column">
+
+        <img src="images/culture.jpg" alt="People enjoying cafés along the Thessaloniki waterfront" class="photo photo-top">
+
+        <section id="culture" class="card">
             <h2>Culture</h2>
             <p>
-                Thessaloniki is a vibrant city known for its diverse culture, lively atmosphere, and rich traditions. 
-                Its streets are filled with cafés, restaurants, music venues, and markets that reflect the everyday life of its residents. 
-                The city is especially famous for its food, combining traditional Greek flavors with influences from its multicultural past. 
-                Festivals, art exhibitions, and a bustling nightlife make Thessaloniki a popular 
+                Thessaloniki is a vibrant city known for its diverse culture, lively atmosphere, and rich traditions.
+                Its streets are filled with caf&eacute;s, restaurants, music venues, and markets that reflect the everyday life of its residents.
+            </p>
+            <p>
+                The city is especially famous for its food, combining traditional Greek flavors with influences from its multicultural past.
+                Festivals, art exhibitions, and a bustling nightlife make Thessaloniki a popular
                 destination for visitors seeking an authentic Greek experience.
             </p>
+            <a href="entertainment.html" class="more" title="Read more about culture">+</a>
         </section>
 
-        <section id="history">
+        </div>
+
+        <!-- ---------- RIGHT COLUMN: History, then photo underneath ---------- -->
+        <div id="rightColumn" class="column">
+
+        <section id="history" class="card">
             <h2>History</h2>
             <p>
-                Founded in 315 BC by King Cassander of Macedon, Thessaloniki has played an important role throughout Greek and European history. 
-                Its strategic location made it a major center during the Roman and Byzantine periods, 
-                leaving behind landmarks such as the Arch of Galerius and the Rotunda. 
-                The city later became part of the Ottoman Empire before joining the Greek state in 1912. 
+                Founded in 315 BC by King Cassander of Macedon, Thessaloniki has played an important role throughout Greek and European history.
+                Its strategic location made it a major center during the Roman and Byzantine periods,
+                leaving behind landmarks such as the Arch of Galerius and the Rotunda.
+            </p>
+            <p>
+                The city later became part of the Ottoman Empire before joining the Greek state in 1912.
                 Today, its historic monuments and archaeological sites reflect the many civilizations that have shaped its identity.
             </p>
+            <a href="museums.html" class="more" title="Read more about history">+</a>
         </section>
+
+        <img src="images/history.jpg" alt="The Rotunda, a Roman monument in Thessaloniki" class="photo photo-bottom">
+
+        </div>
+
     </main>
-    
-    <footer id="homeFooter">
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
         <p>What are you waiting for? Book a hotel!</p>
-        <p><a href="https://www.booking.com/city/gr/thessaloniki.el.html">Thessaloniki Hotels</a></p>
+        <p><a href="https://www.booking.com/city/gr/thessaloniki.el.html" target="_blank">Thessaloniki Hotels</a></p>
+        <p class="copyright"><small>&copy; 2026 Thessaloniki Tourism Guide</small></p>
     </footer>
+
 </body>
 </html>
