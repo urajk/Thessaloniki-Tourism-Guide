@@ -198,30 +198,31 @@ footer .copyright {
     margin-top: 30px;
 }
 
+
 /* ===================== ABOUT US (aboutUs.html) ===================== */
 #aboutMain {
     width: 90%;
     max-width: 1100px;
     margin: 40px auto;
 }
- 
+
 /* one box, centered with margin auto */
 #aboutBox {
     max-width: 800px;
     margin: 0 auto;
     padding: 35px 45px;
 }
- 
+
 #aboutBox h2 {
     text-align: center;
     font-size: 1.8rem;
 }
- 
+
 /* first paragraph a little bigger */
 #aboutBox .intro {
     font-size: 1.1rem;
 }
- 
+
 /* the motto stands out */
 #aboutBox .highlight {
     margin: 25px 0;
@@ -234,7 +235,7 @@ footer .copyright {
     border-right: 5px solid #56664B;
     border-radius: 8px;
 }
- 
+
 /* last line: big, green, centered */
 #aboutBox .closing {
     margin-bottom: 0;
@@ -245,12 +246,139 @@ footer .copyright {
     color: #56664B;
 }
 
+
+
+
+/* ---------- Form ---------- */
+#contactForm label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+#contactForm input,
+#contactForm textarea {
+    display: block;
+    width: 100%;
+    padding: 10px 14px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 0.95rem;
+    color: #292D32;
+    background-color: #fdfaf4;
+    border: 2px solid #d9c7a8;
+    border-radius: 8px;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+/* the user can only make the text area taller, not wider */
+#contactForm textarea {
+    resize: vertical;
+}
+
+/* green border when you click inside a field */
+#contactForm input:focus,
+#contactForm textarea:focus {
+    outline: none;
+    border-color: #56664B;
+    background-color: #ffffff;
+}
+
+#contactForm button {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #56664B;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#contactForm button:hover {
+    background-color: #292D32;
+    transform: translateY(-2px);
+}
+
+
+/* ===================== PHOTO GALLERY (photoGallery.html) ===================== */
+/* wider than the other pages */
+#galleryMain {
+    width: 95%;
+    max-width: 1400px;
+    margin: 40px auto;
+}
+
+/* one row = one category with 3 photos */
+.gallery-row {
+    overflow: auto;
+    margin-bottom: 40px;
+    padding: 25px 20px 10px;
+    background-color: #ffffff;
+    border: 2px solid #d9c7a8;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(41, 45, 50, 0.1);
+}
+
+.gallery-row:last-child {
+    margin-bottom: 0;
+}
+
+.gallery-row h2 {
+    margin: 0 0 20px 1%;
+    padding-left: 14px;
+    font-size: 1.6rem;
+    border-left: 6px solid #56664B;
+}
+
+/* 3 photos side by side: 31.33% + 1% margin on each side = 33.33% */
+.gallery-item {
+    float: left;
+    width: 31.33%;
+    margin: 0 1% 15px;
+}
+
+/* the frame hides the part of the photo that grows on hover */
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 14px;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.04);
+    box-shadow: 0 10px 20px rgba(41, 45, 50, 0.3);
+}
+
+.gallery-item figcaption {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #56664B;
+}
+
+
 /* ===================== RESPONSIVE ===================== */
 
 /* Tablet */
 @media (max-width: 1024px) {
-    #homeMain {
+    #homeMain,
+    #aboutMain,
+    #contactMain {
         width: 95%;
+    }
+
+    .gallery-item img {
+        height: 200px;
     }
 }
 
@@ -263,6 +391,29 @@ footer .copyright {
 
     #homeMain #leftColumn {
         margin-bottom: 30px;
+    }
+
+    #aboutBox {
+        padding: 25px 25px;
+    }
+
+    #contactMain #contactInfo,
+    #contactMain #contactForm {
+        width: 100%;
+        float: none;
+    }
+
+    #contactMain #contactInfo {
+        margin-bottom: 30px;
+    }
+
+    /* gallery: one photo per line */
+    .gallery-item {
+        width: 98%;
+    }
+
+    .gallery-item img {
+        height: 230px;
     }
 
     .photo {
@@ -279,6 +430,14 @@ footer .copyright {
 @media (max-width: 480px) {
     header h1 {
         font-size: 1.6rem;
+    }
+
+    #aboutBox {
+        padding: 20px;
+    }
+
+    #aboutBox h2 {
+        font-size: 1.4rem;
     }
 
     nav ul li a {

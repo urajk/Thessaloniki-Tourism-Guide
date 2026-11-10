@@ -3,10 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Photo Gallery | Thessaloniki Guide</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    
+
+    <!-- ===================== HEADER ===================== -->
+    <header>
+        <img src="images/logo.jpg" alt="Thessaloniki Guide logo" class="logo">
+        <div class="header-text">
+            <h1>Photo Gallery</h1>
+            <p>A guide for tourists</p>
+        </div>
+    </header>
+
+    <!-- ===================== MENU ===================== -->
+    <nav>
+        <ul>
+            <li><a href="index.html"><span class="icon">&#127968;</span> Home</a></li>
+            <li><a href="attraction.html"><span class="icon">&#127963;</span> Attractions</a></li>
+            <li><a href="museums.html"><span class="icon">&#128444;</span> Museums</a></li>
+            <li><a href="beaches.html"><span class="icon">&#127958;</span> Beaches</a></li>
+            <li><a href="food.html"><span class="icon">&#127869;</span> Food</a></li>
+            <li><a href="entertainment.html"><span class="icon">&#127917;</span> Entertainment</a></li>
+            <li><a href="travelGuide.html"><span class="icon">&#129517;</span> Travel Guide</a></li>
+            <li><a href="photoGallery.html" class="active"><span class="icon">&#128247;</span> Gallery</a></li>
+            <li><a href="aboutUs.html"><span class="icon">&#128101;</span> About Us</a></li>
+            <li><a href="contactUs.html"><span class="icon">&#9993;</span> Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===================== MAIN ===================== -->
+    <main id="galleryMain">
+        <!-- ---------- ROW: ENTERTAINMENT ---------- -->
+        <section id="entertainmentRow" class="gallery-row">
+            <h2>Entertainment</h2>
+
+            <figure class="gallery-item">
+                <img src="images/gallery/entertainment1.jpg" alt="Live music in the bars of Ladadika">
+                <figcaption>Live music in the bars of Ladadika</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="images/gallery/entertainment2.jpg" alt="Thessaloniki International Film Festival">
+                <figcaption>Thessaloniki International Film Festival</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="images/gallery/entertainment3.jpg" alt="Night out on the waterfront">
+                <figcaption>Night out on the waterfront</figcaption>
+            </figure>
+        </section>
+
+        <!-- ---------- ROW: CULTURAL APPRECIATION ---------- -->
+        <section id="cultureRow" class="gallery-row">
+            <h2>Cultural Appreciation</h2>
+
+            <figure class="gallery-item">
+                <img src="images/gallery/culture1.jpg" alt="The White Tower">
+                <figcaption>The White Tower</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="images/gallery/culture2.jpg" alt="The Rotunda">
+                <figcaption>The Rotunda</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="images/gallery/culture3.jpg" alt="The Arch of Galerius (Kamara)">
+                <figcaption>The Arch of Galerius (Kamara)</figcaption>
+            </figure>
+        </section>
+
+        <!-- ---------- ROW: HOLIDAYS ---------- -->
+        <section id="holidaysRow" class="gallery-row">
+            <h2>Holidays</h2>
+
+            <figure class="gallery-item">
+                <img src="images/gallery/holidays1.jpg" alt="Christmas lights at Aristotelous Square">
+                <figcaption>Christmas lights at Aristotelous Square</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="images/gallery/holidays2.jpg" alt="Summer on the beaches of Halkidiki">
+                <figcaption>Summer on the beaches of Halkidiki</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="images/gallery/holidays3.jpg" alt="Sunset on the New Waterfront">
+                <figcaption>Sunset on the New Waterfront</figcaption>
+            </figure>
+        </section>
+
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+        <p>What are you waiting for? Book a hotel!</p>
+        <p><a href="https://www.booking.com/city/gr/thessaloniki.el.html" target="_blank">Thessaloniki Hotels</a></p>
+        <p class="copyright"><small>&copy; 2026 Thessaloniki Tourism Guide</small></p>
+    </footer>
+
 </body>
 </html>
