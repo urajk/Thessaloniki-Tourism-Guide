@@ -198,6 +198,52 @@ footer .copyright {
     margin-top: 30px;
 }
 
+/* ===================== ABOUT US (aboutUs.html) ===================== */
+#aboutMain {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+ 
+/* one box, centered with margin auto */
+#aboutBox {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 35px 45px;
+}
+ 
+#aboutBox h2 {
+    text-align: center;
+    font-size: 1.8rem;
+}
+ 
+/* first paragraph a little bigger */
+#aboutBox .intro {
+    font-size: 1.1rem;
+}
+ 
+/* the motto stands out */
+#aboutBox .highlight {
+    margin: 25px 0;
+    padding: 14px 18px;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.1rem;
+    background-color: bisque;
+    border-left: 5px solid #56664B;
+    border-right: 5px solid #56664B;
+    border-radius: 8px;
+}
+ 
+/* last line: big, green, centered */
+#aboutBox .closing {
+    margin-bottom: 0;
+    text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #56664B;
+}
 
 /* ===================== RESPONSIVE ===================== */
 
