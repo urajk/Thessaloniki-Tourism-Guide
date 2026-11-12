@@ -141,6 +141,7 @@ footer {
 
 footer p {
     margin: 5px 0;
+    font-weight: bold;
 }
 
 footer a {
