@@ -141,7 +141,6 @@ footer {
 
 footer p {
     margin: 5px 0;
-    font-weight: bold;
 }
 
 footer a {
@@ -248,7 +247,63 @@ footer .copyright {
 }
 
 
+/* ===================== CONTACT US (contactUs.html) ===================== */
+#contactMain {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    overflow: auto;
+}
 
+#contactMain #contactInfo {
+    width: 38%;
+    float: left;
+}
+
+#contactMain #contactForm {
+    width: 58%;
+    float: right;
+}
+
+/* email and telephone as small boxes */
+#contactInfo .details {
+    margin: 20px 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#contactInfo .details li {
+    margin-bottom: 12px;
+    padding: 12px 16px;
+    background-color: #f7f1e6;
+    border-left: 5px solid #56664B;
+    border-radius: 8px;
+    word-wrap: break-word;
+}
+
+#contactInfo .details .label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #56664B;
+}
+
+#contactInfo .details a {
+    color: #292D32;
+    text-decoration: none;
+}
+
+#contactInfo .details a:hover {
+    text-decoration: underline;
+}
+
+#contactInfo .note {
+    margin-bottom: 0;
+    font-style: italic;
+    color: #56664B;
+}
 
 /* ---------- Form ---------- */
 #contactForm label {
@@ -352,7 +407,6 @@ footer .copyright {
     object-fit: cover;
     border-radius: 14px;
     transition: transform 0.4s, box-shadow 0.4s;
-    border: 2px solid black;
 }
 
 .gallery-item:hover img {
@@ -366,7 +420,92 @@ footer .copyright {
     font-size: 0.9rem;
     font-style: italic;
     color: #56664B;
+}
+
+
+/* ===================== ATTRACTIONS (attraction.html) ===================== */
+#attractionsMain {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+/* short text at the top of the page */
+.page-intro {
+    max-width: 750px;
+    margin: 0 auto 40px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+/* one row = text on the left, photo on the right */
+.attraction {
+    overflow: auto;
+    margin-bottom: 40px;
+}
+
+.attraction:last-child {
+    margin-bottom: 0;
+}
+
+.attraction-text {
+    position: relative;
+    float: left;
+    width: 48%;
+    min-height: 340px;
+}
+
+.attraction-photo {
+    float: right;
+    width: 48%;
+    height: 340px;
+    object-fit: cover;
+    border: 6px solid #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(41, 45, 50, 0.2);
+    transition: transform 0.4s;
+}
+
+.attraction-photo:hover {
+    transform: scale(1.03);
+}
+
+/* zigzag: every 2nd row (2, 4) swaps sides - photo left, text right */
+.attraction:nth-of-type(even) .attraction-text {
+    float: right;
+}
+
+.attraction:nth-of-type(even) .attraction-photo {
+    float: left;
+}
+
+/* round number in the top-right corner of the box */
+.attraction-text .number {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
     font-weight: bold;
+    color: #ffffff;
+    background-color: #56664B;
+    border-radius: 50%;
+}
+
+/* leave space so the title does not go under the number */
+.attraction-text h2 {
+    padding-right: 50px;
+}
+
+.attraction-text .location {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #56664B;
 }
 
 
@@ -376,7 +515,8 @@ footer .copyright {
 @media (max-width: 1024px) {
     #homeMain,
     #aboutMain,
-    #contactMain {
+    #contactMain,
+    #attractionsMain {
         width: 95%;
     }
 
@@ -408,6 +548,25 @@ footer .copyright {
 
     #contactMain #contactInfo {
         margin-bottom: 30px;
+    }
+
+    /* attractions: photo goes under the text */
+    .attraction-text,
+    .attraction-photo,
+    .attraction:nth-of-type(even) .attraction-text,
+    .attraction:nth-of-type(even) .attraction-photo {
+        width: 100%;
+        float: none;
+    }
+
+    .attraction-text {
+        min-height: 0;
+        margin-bottom: 20px;
+    }
+
+    .attraction-photo {
+        display: block;
+        height: 240px;
     }
 
     /* gallery: one photo per line */
