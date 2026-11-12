@@ -440,6 +440,8 @@ footer .copyright {
 }
 
 /* one row = text on the left, photo on the right */
+/* padding = free space inside the row, so the hover lift/zoom
+   does not go outside it and cause a scrollbar */
 .attraction {
     overflow: auto;
     margin-bottom: 25px;
@@ -510,6 +512,218 @@ footer .copyright {
 }
 
 
+/* ===================== ENTERTAINMENT (entertainment.html) ===================== */
+#entertainmentMain {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    overflow: auto;
+}
+
+/* ---------- Left sidebar: events ---------- */
+#events {
+    float: left;
+    width: 32%;
+    padding: 25px;
+    background-color: #f7f1e6;
+    border: 2px solid #d9c7a8;
+    border-radius: 20px;
+}
+
+#events h2 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+/* each event: white box with a green line on the left */
+.event {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-left: 5px solid #56664B;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.event:last-child {
+    margin-bottom: 0;
+}
+
+.event:hover {
+    transform: translateX(6px);
+}
+
+/* small green label with the month */
+.event .month {
+    display: inline-block;
+    padding: 2px 10px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+    background-color: #56664B;
+    border-radius: 20px;
+}
+
+.event h3 {
+    margin: 8px 0 5px;
+    font-size: 1.05rem;
+}
+
+.event p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* ---------- Right side: articles ---------- */
+#articles {
+    float: right;
+    width: 64%;
+}
+
+/* one article = text on the left, photo on the right */
+.ent-article {
+    overflow: auto;
+    margin-bottom: 25px;
+    padding: 25px;
+    background-color: #ffffff;
+    border: 2px solid #d9c7a8;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(41, 45, 50, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.ent-article:last-child {
+    margin-bottom: 0;
+}
+
+/* no movement on hover here, only colour, so no scrollbars appear */
+.ent-article:hover {
+    border-color: #56664B;
+    box-shadow: 0 8px 18px rgba(41, 45, 50, 0.2);
+}
+
+.ent-article .text {
+    float: left;
+    width: 58%;
+}
+
+.ent-article .text h2 {
+    margin-top: 0;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #292D32;
+}
+
+.ent-article .text p {
+    font-size: 0.95rem;
+}
+
+.ent-article img {
+    float: right;
+    width: 38%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+
+/* ===================== ENTERTAINMENT - HOVER VERSION (entertainment-hover.html) ===================== */
+/* Each row has 3 layers placed on top of each other with position: absolute:
+   1. the text (hidden at first)   2. the dashed hint on the right   3. the photo
+   On hover the photo moves from left: 0 to left: 52% (like the moving ball example)
+   and the text fades in where the photo was. */
+
+.flip-row {
+    position: relative;     /* the absolute children are placed inside this row */
+    height: 320px;
+    margin-bottom: 30px;
+}
+
+/* 1. the text: on the left, invisible at first */
+.flip-row .flip-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 48%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.flip-row .flip-text h2 {
+    margin-top: 0;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #292D32;
+}
+
+/* 2. the empty right side: dashed box with a small hint */
+.flip-row .flip-hint {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48%;
+    height: 100%;
+    padding-top: 145px;
+    text-align: center;
+    font-style: italic;
+    color: #a08f72;
+    border: 3px dashed #d9c7a8;
+    border-radius: 20px;
+    transition: opacity 0.3s;
+}
+
+/* 3. the photo: on the left, above everything else */
+.flip-row .flip-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 48%;
+    height: 100%;
+    transition: left 0.6s ease-in-out;
+}
+
+.flip-row .flip-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 6px solid #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(41, 45, 50, 0.2);
+}
+
+/* title written on the photo, so you know what it is before hovering */
+.flip-row .flip-label {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 6px 16px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: rgba(41, 45, 50, 0.75);
+    border-radius: 30px;
+}
+
+/* ---------- what happens on hover ---------- */
+.flip-row:hover .flip-photo {
+    left: 52%;
+}
+
+.flip-row:hover .flip-text {
+    opacity: 1;
+    transition-delay: 0.2s;   /* text appears when the photo has started moving */
+}
+
+.flip-row:hover .flip-hint {
+    opacity: 0;
+}
+
+
 /* ===================== RESPONSIVE ===================== */
 
 /* Tablet */
@@ -517,7 +731,8 @@ footer .copyright {
     #homeMain,
     #aboutMain,
     #contactMain,
-    #attractionsMain {
+    #attractionsMain,
+    #entertainmentMain {
         width: 95%;
     }
 
@@ -568,6 +783,53 @@ footer .copyright {
     .attraction-photo {
         display: block;
         height: 240px;
+    }
+
+    /* entertainment: sidebar on top, then the articles */
+    #events,
+    #articles,
+    .ent-article .text,
+    .ent-article img {
+        width: 100%;
+        float: none;
+    }
+
+    #events {
+        margin-bottom: 30px;
+    }
+
+    .ent-article img {
+        display: block;
+        height: 200px;
+        margin-top: 10px;
+    }
+
+    /* entertainment hover version: no animation on phones (no mouse),
+       text and photo one under the other, always visible */
+    .flip-row {
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    .flip-row .flip-photo,
+    .flip-row .flip-text {
+        position: static;
+        width: 100%;
+        height: auto;
+        opacity: 1;
+    }
+
+    .flip-row .flip-photo {
+        position: relative;   /* keeps the label on the photo */
+        margin-bottom: 15px;
+    }
+
+    .flip-row .flip-photo img {
+        height: 220px;
+    }
+
+    .flip-row .flip-hint {
+        display: none;
     }
 
     /* gallery: one photo per line */
