@@ -724,6 +724,104 @@ footer .copyright {
 }
 
 
+/* ===================== MUSEUMS (museums.html) ===================== */
+#museumsMain {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+/* 2 x 2 grid with flexbox: each card is a bit less than half,
+   so two fit in one line and the rest wrap to the next line */
+.museum-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* ---------- Flip card ----------
+   .flip-card  = the space on the page (gives the 3D depth)
+   .flip-inner = turns around on hover
+   .flip-front and .flip-back = the two sides, one on top of the other */
+.flip-card {
+    flex: 0 0 calc(50% - 15px);   /* half the width minus half the gap */
+    height: 340px;
+    perspective: 1000px;          /* makes the turn look 3D */
+}
+
+.flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;   /* keep the two sides in 3D */
+}
+
+/* on hover the card turns 180 degrees around the vertical axis */
+.flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    backface-visibility: hidden;          /* hide the side that faces away */
+    -webkit-backface-visibility: hidden;  /* same, for Safari */
+    box-shadow: 0 4px 12px rgba(41, 45, 50, 0.2);
+}
+
+/* front side: the photo */
+.flip-front img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flip-front .flip-label {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 6px 16px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: rgba(41, 45, 50, 0.75);
+    border-radius: 30px;
+}
+
+/* back side: already turned around, so it faces us after the flip */
+.flip-back {
+    padding: 35px;
+    color: #ffffff;
+    background-color: #56664B;
+    border: 6px solid #ffffff;
+    transform: rotateY(180deg);
+}
+
+.flip-back h2 {
+    margin-top: 0;
+    padding-bottom: 8px;
+    color: #ffffff;
+    border-bottom: 3px solid bisque;
+}
+
+.flip-back .location {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: bisque;
+}
+
+
 /* ===================== RESPONSIVE ===================== */
 
 /* Tablet */
@@ -732,7 +830,8 @@ footer .copyright {
     #aboutMain,
     #contactMain,
     #attractionsMain,
-    #entertainmentMain {
+    #entertainmentMain,
+    #museumsMain {
         width: 95%;
     }
 
@@ -830,6 +929,15 @@ footer .copyright {
 
     .flip-row .flip-hint {
         display: none;
+    }
+
+    /* museums: one card per line (tap the card to turn it) */
+    .flip-card {
+        flex: 0 0 100%;
+    }
+
+    .flip-back {
+        padding: 25px;
     }
 
     /* gallery: one photo per line */

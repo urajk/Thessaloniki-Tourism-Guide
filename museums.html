@@ -3,10 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museums | Thessaloniki Guide</title>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
 </head>
 <body>
-    
+
+    <!-- ===================== HEADER ===================== -->
+    <header>
+        <img src="images/logo.jpg" alt="Thessaloniki Guide logo" class="logo">
+        <div class="header-text">
+            <h1>Museums</h1>
+            <p>A guide for tourists</p>
+        </div>
+    </header>
+
+    <!-- ===================== MENU ===================== -->
+    <nav>
+        <ul>
+            <li><a href="index.html"><span class="icon">&#127968;</span> Home</a></li>
+            <li><a href="attraction.html"><span class="icon">&#127963;</span> Attractions</a></li>
+            <li><a href="museums.html" class="active"><span class="icon">&#128444;</span> Museums</a></li>
+            <li><a href="weather.html"><span class="icon">&#127780;</span> Weather</a></li>
+            <li><a href="food.html"><span class="icon">&#127869;</span> Food</a></li>
+            <li><a href="entertainment.html"><span class="icon">&#127917;</span> Entertainment</a></li>
+            <li><a href="travelGuide.html"><span class="icon">&#129517;</span> Travel Guide</a></li>
+            <li><a href="photoGallery.html"><span class="icon">&#128247;</span> Gallery</a></li>
+            <li><a href="aboutUs.html"><span class="icon">&#128101;</span> About Us</a></li>
+            <li><a href="contactUs.html"><span class="icon">&#9993;</span> Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===================== MAIN ===================== -->
+    <main id="museumsMain">
+
+        <p class="page-intro">Move your mouse over a museum to turn the card and read about it.</p>
+
+        <!-- 2 x 2 grid made with flexbox -->
+        <div class="museum-grid">
+
+            <!-- ---------- ARCHAEOLOGICAL MUSEUM ---------- -->
+            <div id="archaeological" class="flip-card">
+                <div class="flip-inner">
+
+                    <!-- front: photo with the name -->
+                    <div class="flip-front">
+                        <img src="images/museums/archaeological.jpg" alt="Archaeological Museum">
+                        <span class="flip-label">Archaeological Museum</span>
+                    </div>
+
+                    <!-- back: text about the museum -->
+                    <div class="flip-back">
+                        <h2>Archaeological Museum</h2>
+                        <p>Treasures of ancient Macedonia, from prehistoric times to the Roman city. Do not miss the golden Derveni Krater and the jewellery of the Macedonian tombs.</p>
+                        <p class="location">&#128205; Manoli Andronikou 6, near the International Fair</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ---------- MUSEUM OF BYZANTINE CULTURE ---------- -->
+            <div id="byzantine" class="flip-card">
+                <div class="flip-inner">
+
+                    <!-- front: photo with the name -->
+                    <div class="flip-front">
+                        <img src="images/museums/byzantine.png" alt="Museum of Byzantine Culture">
+                        <span class="flip-label">Museum of Byzantine Culture</span>
+                    </div>
+
+                    <!-- back: text about the museum -->
+                    <div class="flip-back">
+                        <h2>Museum of Byzantine Culture</h2>
+                        <p>Icons, mosaics, wall paintings and everyday objects from the Byzantine and post-Byzantine years. It won the Council of Europe Museum Prize in 2005.</p>
+                        <p class="location">&#128205; Stratou Avenue 2, next to the Archaeological Museum</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ---------- JEWISH MUSEUM ---------- -->
+            <div id="jewish" class="flip-card">
+                <div class="flip-inner">
+
+                    <!-- front: photo with the name -->
+                    <div class="flip-front">
+                        <img src="images/museums/jewish.jfif" alt="Jewish Museum">
+                        <span class="flip-label">Jewish Museum</span>
+                    </div>
+
+                    <!-- back: text about the museum -->
+                    <div class="flip-back">
+                        <h2>Jewish Museum</h2>
+                        <p>The story of the Sephardic Jewish community, which shaped the life of the city for more than four centuries, and of its tragic loss in the Second World War.</p>
+                        <p class="location">&#128205; Agiou Mina 13, near the Modiano market</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ---------- NOESIS SCIENCE CENTER ---------- -->
+            <div id="noesis" class="flip-card">
+                <div class="flip-inner">
+
+                    <!-- front: photo with the name -->
+                    <div class="flip-front">
+                        <img src="images/museums/noesis.jfif" alt="NOESIS Science Center">
+                        <span class="flip-label">NOESIS Science Center</span>
+                    </div>
+
+                    <!-- back: text about the museum -->
+                    <div class="flip-back">
+                        <h2>NOESIS Science Center</h2>
+                        <p>A science and technology museum with a planetarium, interactive exhibits and a hall of old cars and inventions. Great for families and kids.</p>
+                        <p class="location">&#128205; Thermi, about 20 minutes from the centre</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+        <p>What are you waiting for? Book a hotel!</p>
+        <p><a href="https://www.booking.com/city/gr/thessaloniki.el.html" target="_blank">Thessaloniki Hotels</a></p>
+        <p class="copyright"><small>&copy; 2026 Thessaloniki Tourism Guide</small></p>
+    </footer>
+
 </body>
 </html>
